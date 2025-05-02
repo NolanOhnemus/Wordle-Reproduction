@@ -4,7 +4,7 @@ This project was a semester-long initiative developed using the Scrum methodolog
 
 In addition to recreating the core gameplay, we introduced new features such as statistic tracking and various quality-of-life improvements to enhance the original experience. The project was primarily developed using TypeScript and CSS within the React framework. It also relies on a MongoDB server to facilitate communication between the client and server, specifically querying words dynamically to prevent cheating.
 
-This project served as both my introduction to JavaScript/TypeScript and CSS. My responsibilities included developing the statistics manager, contributing to the core game logic, and working on the CSS styling. I also created animations and ensured the visual design was a faithful, one-to-one recreation of the original Wordle.
+This project provided a comprehensive introduction to TypeScript, JavaScript, and CSS, while deepening my understanding of full-stack development with React and MongoDB. I developed the statistics manager, contributed to the core gameplay logic, and crafted CSS animations to ensure a visually faithful recreation of the original Wordle. Working within an Agile Scrum framework over five sprints, I gained experience in collaborative software development, sprint planning, and iterative problem-solving.
 
 ## Installation Instructions
 
