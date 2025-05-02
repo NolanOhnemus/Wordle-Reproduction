@@ -1,0 +1,218 @@
+.wordle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.guess-line {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0;
+    justify-content: center;
+}
+
+.guess-letter {
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    width: 10vh;
+    height: 10vh;
+    aspect-ratio: 1 / 1;
+    font-size: 5vh;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.small-letter {
+    width: 7vh;
+    height: 7vh;
+    font-size: 3vh;
+}
+
+.letter-list {
+    padding: 0; /* add space between side of screen and element */
+    display: flex; /* Grid is better than flex for displaying the alphabet, if we change it to a keyboard this will change */
+    /* grid-template-columns: auto auto auto auto; /* Creates a grid with 4 columns, allows for non-uniform rows
+    grid-gap: 5px; same gap as game container, to match */
+    gap: 5px;
+    flex-direction: row;
+    max-height: 80vh;
+    max-width: 25vw;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+/* The styling for the parent page element */
+.HolyGrail {
+    display: flex;          /* Flex allows for setting the height and to order items in a column */
+    flex-direction: column; /* Set the direct to place elements down a column instead of across a row */
+    min-height: 100vh;      /* Set the height of the display to the entire view */
+    margin: 0;              /* Remove the margin to eliminate scroll bars */
+}
+
+/* The styling for the 'body' element, i.e. the part between the header and footer */
+.HolyGrail-body {
+    display: flex;          /* Flex display allows the 'nav' pane and the 'right' pane to be spaced using flex spacing */
+    /* flex-grow: 1;           Set the grow size of the 'body' element to grow larger than other items */
+    /*  NOTE: The other items in the column are the header and the footer.
+     *        Setting this property to 1 forces the main item to grow to the size
+     *        of the screen minus the size of the header and footer
+     */
+}
+
+/* Styling for the content item i.e. the item in between the 'nav' and the 'right' pane */
+.HolyGrail-content {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the 'nav' and 'right' panes - force them to a specific size and don't let them grow or shrink */
+.HolyGrail-nav, .HolyGrail-right {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 0 1.75vw;
+}
+
+.HolyGrail-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.statisticsContainer {
+    overflow: auto;
+    max-height: 70vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3a3c;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.header {
+    padding: 1.75vh 0;
+    border-bottom: solid 1px rgb(66, 66, 66);
+    margin: 0 0 6vh 0;
+}
+
+.footer, .header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 10vh;
+}
+
+.header-text {
+    font-family: "Book Antiqua", serif;
+    font-size: xx-large;
+    font-weight: bold;
+    -webkit-text-stroke: white 1px;
+    --stretch: 1.15;
+    -webkit-transform:scale(1, var(--stretch)); /* Safari and Chrome */
+    -moz-transform:scale(1, var(--stretch)); /* Firefox */
+    -ms-transform:scale(1, var(--stretch)); /* IE 9 */
+    -o-transform:scale(1, var(--stretch)); /* Opera */
+    transform:scale(1, var(--stretch)); /* W3C */
+}
+
+.message-box {
+    padding: 5px 0px;
+    max-height: 20px;
+}
+
+.statisticsLister {
+    max-height: 16vh;
+    height: 16vh;
+    overflow: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121213;
+    color: white;
+    overflow: hidden;
+}
+
+.stats-line {
+    padding: 20px;
+    max-height: 20px;
+    border-bottom: 3px solid #424242;
+}
+
+.endMessageContainer {
+    background-color: #121213;
+}
+
+.centerImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+}
+
+.animated {
+    background-image: url(/css/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:95px;
+    margin-bottom:60px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: 1000000000000;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+.button {
+    background-color: rgb(66, 66, 66);
+    border: 3px solid rgb(66, 66, 66);
+    color: white; font-size: 18px;
+    width: 310px; padding: 10px;
+}
+
+.freq-button {
+    border: solid;
+    border-width: 3;
+    color: white;
+    font-size: 18;
+    width: 100%;
+    padding: 10px;
+}
